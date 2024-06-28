@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Aquí continuaría el contenido del header -->
+        <img id="seriefav" src="../imagenes/peli.jpeg" alt="Logo">
+        <h1 id="nombre1" class="titulo-hover" onmouseover="saltarTitulo(this)" onmouseout="restaurarTitulo(this)">ENTERTAINMENT PAGE...</h1>
+        <nav>
+            <ul class="etiquetas">
+                <li class="niveles"> <a href="inicio.html" target="_blank">Inicio</a> </li>
+                <li class="niveles"> <a href="menu.html" target="_blank">Menu</a> </li>
+                <li class="niveles"> <a href="contacto.html" target="_blank">Contactenos</a> </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <section class="container">
+                <section class="def1">
+                    <h1 id="pelicula" class="titulo-hover" onmouseover="saltarTitulo(this)" onmouseout="restaurarTitulo(this)">
+                        Que es una pelicula?
+                    </h1>
+                    <p id="definicion">
+                        Una película, también llamado filme, es una serie de imágenes fijas que,
+                        cuando se proyectan en una pantalla de forma consecutiva en rápida sucesión, crean la ilusión óptica de imágenes en movimiento.
+                        El término normalmente se usa como sinónimo de obra cinematográfica, es decir, una historia, registrada en un soporte que se graba y
+                        lee mediante un mecanismo continuo o intermitente de sucesión de imágenes. Estas películas cinematográficas también reciben el nombre de film o acortado peli.
+                    </p>
+                </section>
+                <img id="ham1" src="../imagenes/variedadpeliculas.webp" class="imagen-hover" onmouseover="rotarImagen(this)" onmouseout="restaurarRotacion(this)">
+            </section>
+
+            <section class="container">
+                <section class="def2">
+                    <h1 id="series" class="titulo-hover" onmouseover="saltarTitulo(this)" onmouseout="restaurarTitulo(this)">
+                        Que es una serie?
+                    </h1>
+                    <p id="definition">
+                        Es una obra audiovisual que se transmite en emisiones sucesivas y donde se mantiene una unidad argumental y temática en todos los episodios o capítulos. Si la serie fue realizada con dibujos animados, se conoce como serie animada.
+                        En la actualidad este tipo de series de la pequeña pantalla se han convertido en uno de los máximos entretenimientos que tenemos a la hora de desconectar del trabajo y de relajarnos en el sofá de casa. Tanto es así que el sector de la ficción televisiva ha conseguido un importante número de inversiones que está dando lugar a grandes producciones que nada tienen que envidiar a las películas.
+                        En los últimas décadas muchas son las series que se han convertido en un referente mundial. Este sería el caso, por ejemplo, de “Friends”, “Sexo en Nueva York”, “Homeland”, “Mad Men”, “A dos metros bajo tierra”, “Como conocí a vuestra madre”, “Mujeres desesperadas”, “Big Ban Theory”…
+                    </p>
+                </section>
+                <img id="ham2" src="../imagenes/series2024.webp" class="imagen-hover" onmouseover="rotarImagen(this)" onmouseout="restaurarRotacion(this)">
+            </section>
+        </article>
+    </main>
+
+    <footer id="fot">
+        <a href="https://www.facebook.com/login.php/"><ion-icon id="iconos" name="logo-facebook"></ion-icon></a>
+        <a href="https://www.instagram.com/accounts/login/"><ion-icon id="iconos" name="logo-instagram"></ion-icon></a>
+        <a href="https://twitter.com/iniciarsesion?lang=es"><ion-icon id="iconos" name="logo-twitter"></ion-icon></a>
+        <a href="https://web.whatsapp.com/"><ion-icon id="iconos" name="logo-whatsapp"></ion-icon></a>
+        <a href="https://www.tiktok.com/login/phone-or-email/email?lang=es"><ion-icon id="iconos" name="logo-tiktok"></ion-icon></a>
+        <p class="pie-pag">&copy; Realizada por Cecilia</p>
+    </footer>
+
+    <script>
+           // Cambiar imagen al pasar el mouse
+    document.getElementById("seriefav").addEventListener("mouseover", function() {
+        this.src = "../imagenes/CAMBIO.gif"; // Cambia la ruta de la imagen según sea necesario
+    });
+    
+    document.getElementById("seriefav").addEventListener("mouseout", function() {
+        this.src = "../imagenes/peli.jpeg"; // Imagen original
+    });
+
+        // Animación de los títulos al pasar el mouse
+        function saltarTitulo(element) {
+            element.style.transition = "transform 0.5s";
+            element.style.transform = "scale(1.2)";
+        }
+
+        function restaurarTitulo(element) {
+            element.style.transition = "transform 0.5s";
+            element.style.transform = "scale(1)";
+        }
+
+        // Función para rotar una imagen al pasar el mouse sobre ella
+        function rotarImagen(elemento) {
+            elemento.style.transform = "rotateY(180deg)";
+        }
+
+        // Función para restaurar la rotación de la imagen
+        function restaurarRotacion(elemento) {
+            elemento.style.transform = "";
+        }
+
+        // Función para cambiar la imagen principal al pasar el mouse sobre el logo
+        function cambiarImagen() {
+            document.getElementById('seriefav').src = '../imagenes/otra_imagen.jpg';
+        }
+
+        // Función para restaurar la imagen original del logo al quitar el mouse
+        function restaurarImagen() {
+            document.getElementById('seriefav').src = '../imagenes/peli.jpeg';
+        }
+
+        // Función cambiar color al pasar el mouse sobre los enlaces del menú
+        function agrandarYCambiarColor() {
+            // Obtener todos los enlaces dentro de la lista de etiquetas
+            var enlaces = document.querySelectorAll('.etiquetas .niveles a');
+
+            // 
+            enlaces.forEach(function (enlace) {
+                // Agregar evento al pasar el mouse sobre el enlace
+                enlace.addEventListener('mouseover', function () {
+                    this.style.color = '#FF5733'; // Cambiar color
+                });
+
+                // Agregar evento al quitar el mouse del enlace para restaurar estado original
+                enlace.addEventListener('mouseout', function () {
+                    this.style.color = '#45b40d'; // Restaurar color original
+                });
+            });
+        }
+        //
+        document.addEventListener('DOMContentLoaded', function () {
+            agrandarYCambiarColor();
+        });
+    </script>
+</body>
+
+</html>

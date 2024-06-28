@@ -1,0 +1,293 @@
+body {
+    background-image: url(../imagenes/opciones\ bb.jpeg);
+    margin: 0%;
+    padding: 0%;  
+    background-repeat: no-repeat;
+}
+
+*{
+    margin:  0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing:border-box;
+     }
+
+/*index*/
+
+    /*imagen*/
+#seriefav {
+    width: 15vw;
+    height: auto;
+    margin: 15px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 6px rgba(200, 79, 49, 0.973);
+}
+
+#nombre1 {
+    margin-top: 10px;
+    margin-left: 30px;
+    font-size: 5vw;
+    color: #bf9b46;
+    font-family: "Dancing Script", cursive;
+}
+
+/**/
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    background-image: url(../imagenes/fondo\ paginas.jpg);
+    padding: 10px;
+}
+.etiquetas {
+    display: flex;
+    justify-content: center;
+    font-size: 4vw;
+    color: rgb(227, 46, 18);
+    padding: 1px;
+    list-style: none;
+    margin: 0;
+}
+.niveles {
+    margin: 0 1vw;
+    color: #45b40d;
+    font-family: "Dancing Script", cursive;
+}
+.niveles a {
+    text-decoration: none;
+    color: inherit;
+}
+/*contenido*/
+h1 {
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    font-size: 8vw;
+    color: #431805;
+    margin: 10px 0;
+}
+#definicion, #definition {
+    font-size: 3vw;
+    margin: 10px;
+    color: rgb(211, 38, 182);
+}
+#ham1, #ham2 {
+    width: 80%;
+    height: auto;
+    margin: 2% auto;
+    border-radius: 10px;
+}
+#ham1:hover, #ham2:hover {
+    box-shadow: 10px 10px 12px #03045e;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+}
+.def1, .def2 {
+    text-align: center;
+}
+    /*fin index*/
+
+
+
+/*Menu*/
+    /* tarjetas..*/
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 10px;
+    }
+    .def1, .def2 {
+        text-align: center;
+    }
+    /*fin index*/
+    
+    /*Menu*/
+    /* tarjetas */
+    .contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    .tarjet {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        margin: 20px;
+        perspective: 600px;
+    }
+    .tarjet img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+    }
+    .tarjet .face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: transform 0.5s;
+    }
+    .tarjet .front {
+        transform: rotateY(0deg);
+        box-shadow: 0 5px 10px #b50808;
+    }
+    .tarjet .front .img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .tarjet .front h3 {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+        color: #fff;
+        background: rgba(0,0,0,.4);
+        text-align: center;
+        font-weight: 600;
+    }
+    .tarjet .back {
+        transform: rotateY(180deg);
+        background: black;
+        padding: 15px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        box-shadow: 0 5px 10px black;
+    }
+    .tarjet .back .link {
+        border-top: solid 1px #f3f3f3;
+        height: 50px;
+        line-height: 50px;
+    }
+    .tarjet .back a {
+        color: #f0e9e9;
+    }
+    .tarjet .back h3 {
+        font-size: 20px;
+        margin-top: 20px;
+        letter-spacing: 2px;
+    }
+    .tarjet .back p {
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .tarjet:hover .front {
+        transform: rotateY(180deg);
+    }
+    .tarjet:hover .back {
+        transform: rotateY(360deg);
+    }
+    /*fin menu*/
+/*fin menu*/
+
+
+
+ /*contacto*/
+  .etiquetas {
+    display: flex;
+    justify-content: center;
+    font-size: 4vw;
+    color: rgb(227, 46, 18);
+    padding: 1px;
+    list-style: none;
+    margin: 0;
+}
+.niveles {
+    margin: 0 1vw;
+    color: #45b40d;
+    font-family: "Dancing Script", cursive;
+}
+
+.form-register {
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    font-family: "Dancing Script", cursive;
+    background-color: rgb(181, 212, 212);
+    padding: 30px;
+    margin-top: 100px;
+    border-radius: 4px;
+    color: rgb(83, 96, 96);
+}
+
+.form-register h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.form-register label {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.form-register input[type="text"],
+.form-register input[type="email"],
+.form-register select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-register input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.form-register input[type="button"] {
+    background-color: #d89906;
+    color: rgb(229, 213, 186);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-register input[type="button"]:hover {
+    background-color: #afb33c;
+}
+/*fin contacto*/
+
+
+
+/*footer*/
+#fot{
+    width: 100%;
+    height: 40px;
+    /*  background-color: #993372;*/
+    background-image: url(../imagenes/fondo\ paginas.jpg);
+    text-align: center;
+}
+#iconos{
+    color: rgb(59, 18, 182);
+    width: 90px;
+    height: 30px;
+    margin-top: 10px;
+}
+/*fin footer*/
+
+
+
+    @media (min-width:768px){
+    }
+
+
+
+    
